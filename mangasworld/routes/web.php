@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Route::get('/getLogin', 'UtilisateurController@getLogin');
+Route::post('/signIn', 'UtilisateurController@signIn');
