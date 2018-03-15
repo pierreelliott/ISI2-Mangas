@@ -7,5 +7,12 @@ use DB;
 
 class Scenariste extends Model
 {
-    
+    /**
+     * Liste des scenaristes
+     * @return collection de scenariste
+     */
+    public function getScenaristes() {
+        $scenaristes = DB::table('scenariste')->get();
+        return $scenaristes;
+    }
 }

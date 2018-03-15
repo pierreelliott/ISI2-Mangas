@@ -20,3 +20,6 @@ Route::post('/signIn', 'UtilisateurController@signIn');
 Route::post('/signOut', 'UtilisateurController@signOut');
 Route::get('/listerMangas', 'MangaController@getMangas');
 Route::get('/listerGenres', 'GenreController@getGenres');
+Route::post('/listerMangasGenre', 'MangaController@getMangasGenre');
+Route::get('/modifierManga/{id}', 'MangaController@updateManga');
+Route::post('/validerManga', 'MangaController@validateManga');

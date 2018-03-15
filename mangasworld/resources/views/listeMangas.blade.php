@@ -27,7 +27,7 @@
                 <td>{{ $manga->nom_scenariste }}</td>
                 <td>{{ $manga->prix }}</td>
                 <td style="text-align:center;">
-                    <a href="/* A compléter */">
+                    <a href="{{url('/modifierManga')}}/{{$manga->id_manga}}">
                         <span class="glyphicon glyphicon-pencil" data-toggle="tooltip"
                               data-placement="top" title="Modifier"></span>
                     </a>
