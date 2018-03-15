@@ -17,3 +17,6 @@ Route::get('/', function () {
 
 Route::get('/getLogin', 'UtilisateurController@getLogin');
 Route::post('/signIn', 'UtilisateurController@signIn');
+Route::post('/signOut', 'UtilisateurController@signOut');
+Route::get('/listerMangas', 'MangaController@getMangas');
+Route::get('/listerGenres', 'GenreController@getGenres');

@@ -31,4 +31,12 @@ class Utilisateur extends Model
         }
         return $connected;
     }
+    
+    /**
+     * Délogue l'utilisateur en supprimant son ID
+     * de la session => le menu n'est plus accessible
+     */
+    public function logout() {
+        Session::forget('id');
+    }
 }

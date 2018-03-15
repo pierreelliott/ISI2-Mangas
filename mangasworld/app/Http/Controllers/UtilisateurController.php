@@ -32,4 +32,14 @@ class UtilisateurController extends Controller
             return view('formLogin', compact('erreur'));
         }
     }
+    
+    /**
+     * Déconnecte le visiteur authentifié
+     * @return Vue home
+     */
+    public function signOut() {
+        $utilisateur = new Utilisateur();
+        $utilisateur->logout();
+        return view('home');
+    }
 }
