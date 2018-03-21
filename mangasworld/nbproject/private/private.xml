@@ -3,13 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/thiboud/mangasworld/app/Http/Controllers/UtilisateurController.php</file>
-            <file>file:/C:/xampp/htdocs/thiboud/mangasworld/resources/views/formLogin.blade.php</file>
-            <file>file:/C:/xampp/htdocs/thiboud/mangasworld/resources/views/layouts/master.blade.php</file>
-            <file>file:/C:/xampp/htdocs/thiboud/mangasworld/app/modeles/Utilisateur.php</file>
-            <file>file:/C:/xampp/htdocs/thiboud/mangasworld/routes/web.php</file>
-            <file>file:/C:/xampp/htdocs/thiboud/mangasworld/resources/views/error.blade.php</file>
-            <file>file:/C:/xampp/htdocs/thiboud/mangasworld/public/css/app.css</file>
+            <file>file:/D:/Pierre-Elliott/Documents/Projets/ISI2-Mangas/mangasworld/resources/views/listeMangas.blade.php</file>
+            <file>file:/D:/Pierre-Elliott/Documents/Projets/ISI2-Mangas/mangasworld/routes/web.php</file>
+            <file>file:/D:/Pierre-Elliott/Documents/Projets/ISI2-Mangas/mangasworld/app/modeles/Manga.php</file>
+            <file>file:/D:/Pierre-Elliott/Documents/Projets/ISI2-Mangas/mangasworld/app/Http/Controllers/MangaController.php</file>
+            <file>file:/D:/Pierre-Elliott/Documents/Projets/ISI2-Mangas/mangasworld/resources/views/formGenre.blade.php</file>
+            <file>file:/D:/Pierre-Elliott/Documents/Projets/ISI2-Mangas/mangasworld/resources/views/formManga.blade.php</file>
         </group>
     </open-files>
 </project-private>
