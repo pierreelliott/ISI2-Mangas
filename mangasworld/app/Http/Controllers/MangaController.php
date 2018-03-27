@@ -71,13 +71,47 @@ class MangaController extends Controller
         }
         $manga = new Manga();
         try {
-            $manga->updateManga($id_manga, $titre, $couverture, $prix,
+            if($id_manga > 0) {
+                $manga->updateManga($id_manga, $titre, $couverture, $prix,
                     $id_dessinateur, $id_genre, $id_scenariste);
+            } else {
+                $manga->insertManga($titre, $couverture, $prix,
+                    $id_dessinateur, $id_genre, $id_scenariste);
+            }
         } catch (Exception $ex) {
             $erreur = $ex->getMessage();
-            return $this->updateManga($id_manga, $erreur);
+            if($id_manga > 0) {
+                return $this->updateManga($id_manga, $erreur);
+            } else {
+                return $this->addManga($erreur);
+            }
         }
         
+        return redirect('/listerMangas');
+    }
+    
+    public function addManga($erreur = "") {
+        $manga = new Manga();
+        $genre = new Genre();
+        $genres = $genre->getGenres();
+        $dessinateur = new Dessinateur;
+        $dessinateurs = $dessinateur->getDessinateurs();
+        $scenariste = new Scenariste();
+        $scenaristes = $scenariste->getScenaristes();
+        $titreVue = "Ajout d'un Manga";
+        // Affiche le formulaire en luifournissant les données à afficher
+        return view('formManga', compact('manga', 'genres', 'dessinateurs',
+                'scenaristes', 'titreVue', 'erreur'));
+    }
+    
+    public function deleteManga($id, $erreur = "") {
+        $manga = new Manga();
+        try {
+            $manga->deleteManga($id);
+        } catch (Exception $ex) {
+            $erreur = $ex->getMessage();
+            Session::put('erreur', $erreur);
+        }
         return redirect('/listerMangas');
     }
 }

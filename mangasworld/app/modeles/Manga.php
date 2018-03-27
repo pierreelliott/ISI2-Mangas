@@ -50,4 +50,26 @@ class Manga extends Model
             throw $ex;
         }
     }
+    
+    public function insertManga($titre, $couverture, $prix,
+            $id_dessinateur, $id_genre, $id_scenariste) {
+        try {
+            DB::table('manga')->insert(
+                    ['id_dessinateur' => $id_dessinateur,
+                    'prix' => $prix, 'titre' => $titre, 'couverture' => $couverture,
+                    'id_genre' => $id_genre, 'id_scenariste' => $id_scenariste]
+            );
+        } catch (Exception $ex) {
+            throw $ex;
+        }
+    }
+    
+    public function deleteManga($id_manga) {
+        try {
+            DB::table('manga')->where('id_manga', '=', $id_manga)
+                    ->delete();
+        } catch (Exception $ex) {
+            throw $ex;
+        }
+    }
 }
